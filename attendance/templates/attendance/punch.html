@@ -1,0 +1,12 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+    <div class="container mx-auto px-4">
+        <h1 class="text-2xl font-bold my-4">Registrar Entrada/Saída</h1>
+        <form action="" method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Enviar</button>
+        </form>
+    </div>
+{% endblock content %}

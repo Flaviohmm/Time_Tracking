@@ -1,0 +1,33 @@
+{% extends "base_generic.html" %}
+
+
+{% block content %}
+    <h1>Relatórios de Horas Trabalhadas</h1>
+    <h2>Diário</h2>
+    <ul>
+        
+        {% for punch in daily_report %}
+            <li>{{ punch.punch_in_time }} - {{ punch.punch_out_time }}</li>
+        {% endfor %}
+            
+    </ul>
+
+    <h2>Semanal</h2>
+    <ul>
+        
+        {% for punch in weekly_report %}
+            <li>{{ punch.punch_in_time }} - {{ punch.punch_out_time }}</li>
+        {% endfor %}
+            
+    </ul>
+
+    <h2>Mensal</h2>
+    <ul>
+        
+        {% for punch in monthly_report %}
+            <li>{{ punch.punch_in_time }} - {{ punch.punch_out_time }}</li>
+        {% endfor %}
+            
+    </ul>
+{% endblock content %}
+    
